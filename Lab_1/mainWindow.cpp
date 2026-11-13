@@ -22,14 +22,14 @@ MainWindow::MainWindow(QWidget *parent)
     resultLabel->setGeometry(400, 320, 300, 30);
 }
 
-void MainWindow::openDialog() //відкриття першого вікна
+void MainWindow::openDialog()
 {
     FirstWindow dlg(this);
     connect(&dlg, &FirstWindow::textConfirmed, this, &MainWindow::onTextReceived);
     dlg.exec();
 }
 
-void MainWindow::openDialog2() // відкриття другого вікна
+void MainWindow::openDialog2()
 {
     SecondWindow dlg(this);
     connect(&dlg, &SecondWindow::valueConfirmed, this, &MainWindow::onValueReceived);
